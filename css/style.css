@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.todo {
+    background-color: #f6ecb6;
+    box-shadow: 2px 2px 5px 1px rgba(66, 68, 90, 1);
+    max-width: 600px;
+    height: 94vh;
+    margin: 3vh auto;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.todo__title {
+    text-align: center;
+    color: #000;
+    font-family: 'Allura', cursive;
+    font-size: 4em;
+    letter-spacing: 3px;
+}
+
+.todo__row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.todo__checkbox {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.todo__checkbox.complete {
+    border: 1px solid #404040;
+}
+
+.todo__input {
+    flex-basis: 80%;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+.todo__checkbox.complete+.todo__input {
+    border: none;
+    color: #404040;
+    text-decoration: line-through;
+}
+
+.todo__input:focus {
+    outline: none;
+}
+
+.todo__checkbox-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: green;
+}
+
+.todo__checkbox.complete .todo__checkbox-icon {
+    display: block;
+}
+
+@media (max-width:620px) {
+    .todo {
+        margin: 3vh 10px;
+    }
+}
